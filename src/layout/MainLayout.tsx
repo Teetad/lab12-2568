@@ -20,14 +20,16 @@ export default function MainLayout() {
       </AppShell.Header>
 
       <AppShell.Navbar>
-        <Sidebar />
+        <Sidebar 
+        userName = "Teetad Raseesit"
+        type = "student"/>
       </AppShell.Navbar>
 
       <AppShell.Footer>
         <FooterComponent
           year="2025"
-          fullName="chanadda"
-          studentId="670612039"
+          fullName="teetad"
+          studentId="670610707"
         />
       </AppShell.Footer>
 

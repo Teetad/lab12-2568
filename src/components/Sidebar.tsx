@@ -12,8 +12,9 @@ interface SidebarComponentProps  {
   userName: string;
   type?: "admin" |"student";
 }
-export type { SidebarProps };
-export default function Sidebar() {
+
+export default function Sidebar(props : SidebarComponentProps) {
+  const {userName , type} = props;
   return (
     <Stack
       align="stretch"
@@ -43,7 +44,18 @@ export default function Sidebar() {
       </Box>
       {/* แสดงผู้ใช้งาน */}
       <Box p={10}>
-        <Text>chanadda</Text>
+      <Group gap = "sm">
+        <Indicator inline size={12} offset={7} position="bottom-end" color="red" withBorder>
+      <Avatar
+        size="md"
+        radius="xl"
+        src="IMG_teetad.JPG"
+      />
+      </Indicator>
+      <Text>
+      User : {userName} : {type}
+      </Text>
+      </Group>
       </Box>
     </Stack>
   );
